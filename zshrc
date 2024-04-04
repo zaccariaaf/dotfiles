@@ -132,6 +132,9 @@ alias -g .....='../../../..'
 alias r='cargo run'
 alias rr='cargo run --release'
 
+# vim
+alias vim='nvim'
+
 #########
 # PROMPT
 #########

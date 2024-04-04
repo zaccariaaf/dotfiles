@@ -19,7 +19,7 @@ brew 'reattach-to-user-namespace'
 brew 'nvm'
 brew 'pyenv'
 brew 'go'
-brew 'rust'
+brew 'rustup'
 brew 'starship'
 
 cask 'keepingyouawake'
