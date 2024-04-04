@@ -1,0 +1,31 @@
+[user]
+  name = Zaccaria Al-Fatlawi
+  email = me@zaccariaaf.com
+
+[core]
+  excludesfile = ~/.gitignore
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+	ui = true
+
+[push]
+	default = current
+	followTags = true
+
+[remote]
+  pushDefault = origin
+
+[branch]
+	autosetuprebase = always
+
+[commit]
+	verbose = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[protocol "file"]
+	allow = always
