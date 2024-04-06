@@ -15,4 +15,4 @@ kitty:
 	mkdir -p $(HOME)/.config/kitty
 	ln -sf $(DOTFILE_PATH)/kitty.conf $(HOME)/.config/kitty/kitty.conf
 
-all: git zsh tmux kitty wezterm
+all: git zsh tmux wezterm kitty
