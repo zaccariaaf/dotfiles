@@ -135,6 +135,9 @@ alias rr='cargo run --release'
 # vim
 alias vim='nvim'
 
+# fzf with bat
+alias search="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
+
 #########
 # PROMPT
 #########
