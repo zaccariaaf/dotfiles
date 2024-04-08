@@ -1,3 +1,15 @@
+# Oh My Zsh configuration
+
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
 ##############
 # BASIC SETUP
 ##############
@@ -141,9 +153,6 @@ alias search="fzf --preview 'bat --color=always --style=numbers --line-range=:50
 #########
 # PROMPT
 #########
-
-# starship
-eval "$(starship init zsh)"
 
 ########
 # ENV
