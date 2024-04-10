@@ -147,9 +147,6 @@ alias rr='cargo run --release'
 # vim
 alias vim='nvim'
 
-# fzf with bat
-alias search="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
-
 #########
 # PROMPT
 #########
@@ -169,6 +166,10 @@ export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # fzf
 eval "$(fzf --zsh)"
+export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim"
+export FZF_ALT_C_OPTS="--preview 'lsd --tree --icon always --color always --depth 16 {}'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

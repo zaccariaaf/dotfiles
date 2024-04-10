@@ -21,6 +21,7 @@ brew 'pyenv'
 brew 'go'
 brew 'rustup'
 brew 'bat'
+brew 'lsd'
 
 cask 'keepingyouawake'
 cask 'rectangle'
