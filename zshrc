@@ -167,6 +167,7 @@ export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 # fzf
 if [[ $(uname) != "Darwin" ]]; then
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
 eval "$(fzf --zsh)"
 export FZF_ALT_C_OPTS="--preview 'lsd --tree --icon always --color always --depth 16 {}'"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
