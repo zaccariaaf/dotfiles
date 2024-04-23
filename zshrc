@@ -178,3 +178,4 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-ran
 export FZF_CTRL_T_COMMAND="rg --files --hidden --glob '!.git'"
 
 export PATH="$HOME/bin:$PATH"
+export BAT_THEME="OneHalfDark"
