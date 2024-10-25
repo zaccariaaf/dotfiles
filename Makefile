@@ -6,7 +6,7 @@ $(HOME)/.%: %
 
 git: $(HOME)/.gitconfig
 zsh: $(HOME)/.zshrc
-
 tmux: $(HOME)/.tmux.conf
+wezterm: $(HOME)/.wezterm.lua
 
-all: git zsh tmux
+all: git zsh tmux wezterm

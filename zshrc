@@ -160,10 +160,6 @@ export COLOR_PROFILE="dark"
 # rustup
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
 # homebrew
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -178,4 +174,4 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-ran
 export FZF_CTRL_T_COMMAND="rg --files --hidden --glob '!.git'"
 
 export PATH="$HOME/bin:$PATH"
-export BAT_THEME="OneHalfDark"
+export BAT_THEME="gruvbox-dark"

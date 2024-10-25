@@ -1,6 +1,6 @@
 [user]
   name = Zaccaria Al-Fatlawi
-  email = me@zaccariaaf.com
+  email = z.a.accounts@icloud.com
 
 [core]
   excludesfile = ~/.gitignore
@@ -9,23 +9,23 @@
   diff = auto
   status = auto
   branch = auto
-	ui = true
+  ui = true
 
 [push]
-	default = current
-	followTags = true
+  default = current
+  followTags = true
 
 [remote]
   pushDefault = origin
 
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 
 [commit]
-	verbose = true
+  verbose = true
 [init]
 	defaultBranch = main
 [pull]
-	rebase = true
+  rebase = true
 [protocol "file"]
-	allow = always
+  allow = always
