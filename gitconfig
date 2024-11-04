@@ -3,7 +3,7 @@
   email = z.a.accounts@icloud.com
 
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/zaccariaaf/.gitignore
 
 [color]
   diff = auto
