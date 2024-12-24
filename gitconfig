@@ -1,9 +1,6 @@
 [user]
-  name = Zaccaria Al-Fatlawi
-  email = z.a.accounts@icloud.com
-
-[core]
-	excludesfile = /Users/zaccariaaf/.gitignore
+  name = zaccariaaf
+  email = me@zaccariaaf.com
 
 [color]
   diff = auto
