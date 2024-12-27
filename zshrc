@@ -40,12 +40,6 @@ unsetopt HIST_VERIFY          # Execute commands using history (e.g.: using !$) 
 # COMPLETION
 #############
 
-# Add completions installed through Homebrew packages
-# See: https://docs.brew.sh/Shell-Completion
-if type brew &>/dev/null; then
-  FPATH=/usr/local/share/zsh/site-functions:$FPATH
-fi
-
 # Speed up completion init, see: https://gist.github.com/ctechols/ca1035271ad134841284
 autoload -Uz compinit
 for dump in ~/.zcompdump(N.mh+24); do
@@ -159,10 +153,6 @@ export COLOR_PROFILE="dark"
 
 # rustup
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# homebrew
-export PATH="/usr/local/bin:$PATH"
-export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # fzf
 if [[ $(uname) != "Darwin" ]]; then
