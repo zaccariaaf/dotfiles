@@ -1,13 +1,3 @@
-# Oh My Zsh configuration
-
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 ##############
@@ -144,10 +134,6 @@ alias vim='nvim'
 # sync files to proton
 alias sync='rclone sync -v --create-empty-src-dirs ~/Documents "proton:/documents"'
 
-#########
-# PROMPT
-#########
-
 ########
 # ENV
 ########
@@ -192,3 +178,11 @@ if [ -f "/home/zaccariaaf/miniforge3/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
+#########
+# PROMPT
+#########
+
+source ~/.p10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
