@@ -141,6 +141,9 @@ alias rr='cargo run --release'
 # vim
 alias vim='nvim'
 
+# sync files to proton
+alias sync='rclone sync -v --create-empty-src-dirs ~/Documents "proton:/documents"'
+
 #########
 # PROMPT
 #########
@@ -165,3 +168,27 @@ export FZF_CTRL_T_COMMAND="rg --files --hidden --glob '!.git'"
 
 export PATH="$HOME/bin:$PATH"
 export BAT_THEME="gruvbox-dark"
+
+# default to neovim
+export VISUAL=nvim
+export EDITOR=nvim
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/zaccariaaf/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/zaccariaaf/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/zaccariaaf/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/zaccariaaf/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/zaccariaaf/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/zaccariaaf/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+

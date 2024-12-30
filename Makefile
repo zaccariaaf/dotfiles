@@ -13,5 +13,8 @@ ghostty:
 kitty:
 	mkdir -p $(HOME)/.config/kitty
 	ln -sf $(DOTFILE_PATH)/kitty.conf $(HOME)/.config/kitty/kitty.conf
+zathura:
+	mkdir -p $(HOME)/.config/zathura
+	ln -sf $(DOTFILE_PATH)/zathurarc $(HOME)/.config/zathura/zathurarc
 
-all: git zsh tmux kitty ghostty
+all: git zsh tmux kitty ghostty zathura
