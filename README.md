@@ -13,15 +13,3 @@ Most of this is based on Thorsten Ball's [dotfiles](https://github.com/mrnugget/
 ```
 make all
 ```
-
-## Installing with homebrew
-
-```
-brew bundle --file=~/.dotfiles/Brewfile
-```
-
-and
-
-```
-brew bundle --force cleanup --file=~/.dotfiles/Brewfile
-```

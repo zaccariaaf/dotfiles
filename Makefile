@@ -7,8 +7,6 @@ $(HOME)/.%: %
 git: $(HOME)/.gitconfig
 zsh: $(HOME)/.zshrc
 tmux: $(HOME)/.tmux.conf
-p10k: $(HOME)/.p10k.zsh
-p10k-theme: $(HOME)/.p10k.zsh-theme
 ghostty:
 	mkdir -p $(HOME)/.config/ghostty
 	ln -sf $(DOTFILE_PATH)/ghostty.conf $(HOME)/.config/ghostty/config
@@ -19,4 +17,4 @@ zathura:
 	mkdir -p $(HOME)/.config/zathura
 	ln -sf $(DOTFILE_PATH)/zathurarc $(HOME)/.config/zathura/zathurarc
 
-all: git zsh tmux kitty ghostty zathura p10k p10k-theme
+all: git zsh tmux kitty ghostty zathura

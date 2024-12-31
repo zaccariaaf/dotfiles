@@ -1,4 +1,35 @@
-# User configuration
+#############
+# PRE-CONFIG
+#############
+
+# If not in tmux, start tmux.
+if [[ -z ${TMUX+X}${ZSH_SCRIPT+X}${ZSH_EXECUTION_STRING+X} ]]; then
+  exec tmux
+fi
+
+function zcompile-many() {
+  local f
+  for f; do zcompile -R -- "$f".zwc "$f"; done
+}
+
+# Clone and compile to wordcode missing plugins.
+if [[ ! -e ~/.zsh-syntax-highlighting ]]; then
+  git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-syntax-highlighting
+  zcompile-many ~/.zsh-syntax-highlighting/{zsh-syntax-highlighting.zsh,highlighters/*/*.zsh}
+fi
+if [[ ! -e ~/.zsh-autosuggestions ]]; then
+  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh-autosuggestions
+  zcompile-many ~/.zsh-autosuggestions/{zsh-autosuggestions.zsh,src/**/*.zsh}
+fi
+if [[ ! -e ~/.p10k ]]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.p10k
+  make -C ~/.p10k pkg
+fi
+
+# Activate Powerlevel10k Instant Prompt.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 ##############
 # BASIC SETUP
@@ -159,30 +190,11 @@ export BAT_THEME="gruvbox-dark"
 export VISUAL=nvim
 export EDITOR=nvim
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/zaccariaaf/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/zaccariaaf/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/zaccariaaf/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/zaccariaaf/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "/home/zaccariaaf/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/zaccariaaf/miniforge3/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-
 #########
 # PROMPT
 #########
 
-source ~/.p10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.p10k/powerlevel10k.zsh-theme
+source ~/.p10k.zsh
