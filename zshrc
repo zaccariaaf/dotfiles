@@ -162,9 +162,6 @@ alias rr='cargo run --release'
 # vim
 alias vim='nvim'
 
-# sync files to proton
-alias sync='rclone sync -v --create-empty-src-dirs ~/Documents "proton:/documents"'
-
 ########
 # ENV
 ########
