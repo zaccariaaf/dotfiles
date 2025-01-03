@@ -2,11 +2,6 @@
 # PRE-CONFIG
 #############
 
-# If not in tmux, start tmux.
-if [[ -z ${TMUX+X}${ZSH_SCRIPT+X}${ZSH_EXECUTION_STRING+X} ]]; then
-  exec tmux
-fi
-
 function zcompile-many() {
   local f
   for f; do zcompile -R -- "$f".zwc "$f"; done
@@ -184,6 +179,7 @@ export BAT_THEME="gruvbox-dark"
 # default to neovim
 export VISUAL=nvim
 export EDITOR=nvim
+export MANPAGER='nvim +Man!'
 
 #########
 # PROMPT
@@ -193,3 +189,25 @@ source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.p10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
+
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/zaccariaaf/.miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/zaccariaaf/.miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/zaccariaaf/.miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/zaccariaaf/.miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/zaccariaaf/.miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/zaccariaaf/.miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
