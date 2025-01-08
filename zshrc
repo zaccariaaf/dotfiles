@@ -174,7 +174,7 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-ran
 export FZF_CTRL_T_COMMAND="rg --files --hidden --glob '!.git'"
 
 export PATH="$HOME/bin:$PATH"
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="base16"
 
 # default to neovim
 export VISUAL=nvim
@@ -189,7 +189,6 @@ source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.p10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
-
 
 
 # >>> conda initialize >>>
