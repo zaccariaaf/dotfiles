@@ -1,8 +1,7 @@
 # SOURCES
-sudo dnf copr enable wezfurlong/wezterm-nightly -y
 sudo dnf copr enable atim/lazygit -y
 # TOOLING
-sudo dnf install make automake gcc curl fd neovim zsh kitty alacritty wezterm gnome-themes-extra ripgrep fzf python3 python3-pip lazygit arm-none-eabi-gcc-cs stlink cmake
+sudo dnf install make automake gcc curl fd neovim zsh kitty alacritty gnome-themes-extra ripgrep fzf python3 python3-pip lazygit arm-none-eabi-gcc-cs stlink cmake
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # UTILS
 sudo dnf install gnome-tweaks ulauncher transmission zathura zathura-pdf-mupdf calibre mpv chromium fira-code-fonts 'mozilla-fira*' 'google-roboto*'

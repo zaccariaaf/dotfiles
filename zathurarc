@@ -1,41 +1,35 @@
-# zathurarc-dark
-set notification-error-bg       "#333333"
-set notification-error-fg       "#c33c33"
-set notification-warning-bg     "#333333"
-set notification-warning-fg     "#c33c33"
-set notification-bg             "#333333"
-set notification-fg             "#ecc48d"
+# Base16 Black Metal
+# Author: metalelf0 (https://github.com/metalelf0)
 
-set completion-group-bg         "#010C14"
-set completion-group-fg         "#cbcbcb"
-set completion-bg               "#1e2425"
-set completion-fg               "#cecece"
-set completion-highlight-bg     "#ffffff"
-set completion-highlight-fg     "#333333"
+set default-bg                  "#000000"
+set default-fg                  "#121212"
 
-# Define the color in index mode
-set index-bg                    "#0e1415"
-set index-fg                    "#cecece"
-set index-active-bg             "#333333"
-set index-active-fg             "#ffffff"
+set statusbar-fg                "#999999"
+set statusbar-bg                "#222222"
 
-set inputbar-bg                 "#333333"
-set inputbar-fg                 "#ffffff"
+set inputbar-bg                 "#000000"
+set inputbar-fg                 "#c1c1c1"
 
-set statusbar-bg                "#0e1415"
-set statusbar-fg                "#cecece"
+set notification-bg             "#000000"
+set notification-fg             "#c1c1c1"
 
-set highlight-color             "#293334"
-set highlight-active-color      "#cbcbcb"
+set notification-error-bg       "#000000"
+set notification-error-fg       "#5f8787"
 
-set default-bg                  "#0e1415"
-set default-fg                  "#cecece"
-set render-loading              true
-set render-loading-fg           "#0e1415"
-set render-loading-bg           "#0e1415"
+set notification-warning-bg     "#000000"
+set notification-warning-fg     "#5f8787"
 
-# Recolor book content's color
-set recolor                     true
-set recolor-lightcolor          "#0e1415"
-set recolor-darkcolor           "#cecece"
-set recolor-keephue             true
+set highlight-color             "#a06666"
+set highlight-active-color      "#888888"
+
+set completion-bg               "#121212"
+set completion-fg               "#888888"
+
+set completion-highlight-fg     "#c1c1c1"
+set completion-highlight-bg     "#888888"
+
+set recolor-lightcolor          "#000000"
+set recolor-darkcolor           "#999999"
+
+set recolor                     "false"
+set recolor-keephue             "false"

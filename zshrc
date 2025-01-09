@@ -166,13 +166,6 @@ export COLOR_PROFILE="dark"
 # rustup
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(fzf --zsh)"
-export FZF_ALT_C_OPTS="--preview 'lsd --tree --icon always --color always --depth 16 {}'"
-export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
-export FZF_CTRL_T_COMMAND="rg --files --hidden --glob '!.git'"
-
 export PATH="$HOME/bin:$PATH"
 export BAT_THEME="base16"
 
@@ -190,6 +183,24 @@ source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.p10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 
+#########
+# FZF
+#########
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
+export FZF_ALT_C_OPTS="--preview 'lsd --tree --icon always --color always --depth 16 {}'"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+export FZF_CTRL_T_COMMAND="rg --files --hidden --glob '!.git'"
+
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
+" --color=bg+:#121212,bg:#000000,spinner:#aaaaaa,hl:#888888"\
+" --color=fg:#999999,header:#888888,info:#a06666,pointer:#aaaaaa"\
+" --color=marker:#aaaaaa,fg+:#999999,prompt:#a06666,hl+:#888888"
+
+#########
+# CONDA
+#########
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

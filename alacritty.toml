@@ -1,31 +1,38 @@
 [font]
-normal.family = "Fira Code"
+normal.family = "Hack Nerd Font"
 size = 12.0
 
+[colors]
+draw_bold_text_with_bright_colors = false
+
+# Default colors
 [colors.primary]
-background = '#0E1415'
-foreground = '#CECECE'
+background = '0x000000'
+foreground = '0xc1c1c1'
 
+# Colors the cursor will use if `custom_cursor_colors` is true
 [colors.cursor]
-text = '#0E1415'
-cursor = '#CECECE'
+text = '0x000000'
+cursor = '0xc1c1c1'
 
+# Normal colors
 [colors.normal]
-black = '#0E1415'
-red = '#e25d56'
-green = '#73ca50'
-yellow = '#e9bf57'
-blue = '#4a88e4'
-magenta = '#915caf'
-cyan = '#23acdd'
-white = '#f0f0f0'
+black = '0x000000'
+red = '0x5f8787'
+green = '0xdd9999'
+yellow = '0xa06666'
+blue = '0x888888'
+magenta = '0x999999'
+cyan = '0xaaaaaa'
+white = '0xc1c1c1'
 
+# Bright colors
 [colors.bright]
-black = '#777777'
-red = '#f36868'
-green = '#88db3f'
-yellow = '#f0bf7a'
-blue = '#6f8fdb'
-magenta = '#e987e9'
-cyan = '#4ac9e2'
-white = '#FFFFFF'
+black = '0x333333'
+red = '0xaaaaaa'
+green = '0x121212'
+yellow = '0x222222'
+blue = '0x999999'
+magenta = '0x999999'
+cyan = '0x444444'
+white = '0xc1c1c1'
