@@ -177,10 +177,11 @@ export FZF_ALT_C_OPTS="--preview 'lsd --tree --icon always --color always --dept
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 export FZF_CTRL_T_COMMAND="rg --files --hidden --glob '!.git'"
 
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
-" --color=bg+:#121212,bg:#000000,spinner:#aaaaaa,hl:#888888"\
-" --color=fg:#999999,header:#888888,info:#a06666,pointer:#aaaaaa"\
-" --color=marker:#aaaaaa,fg+:#999999,prompt:#a06666,hl+:#888888"
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#BBBBBB,fg+:#BBBBBB,bg:#191919,bg+:#404040
+  --color=hl:#B279A7,hl+:#CF86C1,info:#afaf87,marker:#8BAE68
+  --color=prompt:#B279A7,spinner:#B279A7,pointer:#D68C67,header:#87afaf
+  --color=border:#BBBBBB,label:#aeaeae,query:#d9d9d9'
 
 #########
 # CONDA
