@@ -2,15 +2,7 @@
 # PRE-CONFIG
 #############
 
-if [[ ! -e ~/.p10k ]]; then
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.p10k
-  make -C ~/.p10k pkg
-fi
-
-# Activate Powerlevel10k Instant Prompt.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+fish
 
 ##############
 # BASIC SETUP
@@ -158,13 +150,6 @@ export BAT_THEME="base16"
 # default to neovim
 export VISUAL=hx
 export EDITOR=hx
-
-#########
-# PROMPT
-#########
-
-source ~/.p10k/powerlevel10k.zsh-theme
-source ~/.p10k.zsh
 
 #########
 # FZF
