@@ -1,4 +1,5 @@
 # To-Do
 
 - [ ] finish install script for basic utilities
-- [ ] migrate to fish shell
+- [x] migrate to fish shell
+- [ ] set up tiling window manager

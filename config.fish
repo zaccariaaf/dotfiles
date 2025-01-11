@@ -25,5 +25,21 @@ alias r "cargo run"
 alias rr "cargo run --release"
 
 # env
+set -x PATH "$HOME/.cargo/bin" $PATH
+set -x PATH "$HOME/.local/bin" $PATH
+
 set -gx VISUAL hx
 set -gx EDITOR hx
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/zaccariaaf/.miniforge3/bin/conda
+    eval /home/zaccariaaf/.miniforge3/bin/conda "shell.fish" hook $argv | source
+else
+    if test -f "/home/zaccariaaf/.miniforge3/etc/fish/conf.d/conda.fish"
+        . "/home/zaccariaaf/.miniforge3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/zaccariaaf/.miniforge3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
