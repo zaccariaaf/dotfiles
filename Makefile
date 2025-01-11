@@ -8,15 +8,15 @@ git: $(HOME)/.gitconfig
 zsh: $(HOME)/.zshrc
 p10k: $(HOME)/.p10k.zsh
 tmux: $(HOME)/.tmux.conf
-wezterm: $(HOME)/.wezterm.lua
-kitty:
-	mkdir -p $(HOME)/.config/kitty
-	ln -sf $(DOTFILE_PATH)/kitty.conf $(HOME)/.config/kitty/kitty.conf
 alacritty:
 	mkdir -p $(HOME)/.config/alacritty
 	ln -sf $(DOTFILE_PATH)/alacritty.toml $(HOME)/.config/alacritty/alacritty.toml
 zathura:
 	mkdir -p $(HOME)/.config/zathura
 	ln -sf $(DOTFILE_PATH)/zathurarc $(HOME)/.config/zathura/zathurarc
+helix:
+	mkdir -p $(HOME)/.config/helix
+	ln -sf $(DOTFILE_PATH)/helix.toml $(HOME)/.config/helix/config.toml
+	ln -sf $(DOTFILE_PATH)/helixlang.toml $(HOME)/.config/helix/languages.toml
 
-all: git zsh tmux kitty zathura p10k alacritty
+all: git zsh tmux zathura p10k alacritty helix

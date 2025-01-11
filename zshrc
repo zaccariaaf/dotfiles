@@ -156,9 +156,8 @@ export PATH="$HOME/bin:$PATH"
 export BAT_THEME="base16"
 
 # default to neovim
-export VISUAL=nvim
-export EDITOR=nvim
-export MANPAGER='nvim +Man!'
+export VISUAL=hx
+export EDITOR=hx
 
 #########
 # PROMPT
