@@ -4,8 +4,23 @@ theme = "rasmus"
 line-number = "relative"
 mouse = false
 bufferline = "multiple"
+end-of-line-diagnostics = "hint"
+
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
