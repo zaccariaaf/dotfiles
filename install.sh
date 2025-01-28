@@ -1,18 +1,17 @@
+# PPA
+sudo add-apt-repository universe -y
+sudo add-apt-repository ppa:agornostal/ulauncher
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
 # TOOLING
-sudo dnf install make automake cmake gcc clang clangd lldb mold curl fd alacritty ripgrep fzf openssl-devel perl python3 python3-pip arm-none-eabi-gcc-cs stlink
+sudo apt install git make automake cmake gcc clang clangd lldb mold curl alacritty libssl-dev perl python3 python3-pip gcc-arm-none-eabi stlink-tools helix fish
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install --locked zellij
-git clone https://github.com/helix-editor/helix ~/.helix && cd ~/.helix && cargo install --path helix-term --locked && ln -Ts $PWD/runtime ~/.config/helix/runtime
 hx --grammar fetch && hx --grammar build
 rustup completions fish > ~/.config/fish/completions/rustup.fish
 # LANGUAGE SERVERS
 pip install basedpyright
 cargo install taplo-cli --locked --features lsp
 # UTILS
-sudo dnf install gnome-tweaks ulauncher transmission zathura zathura-pdf-mupdf calibre mpv chromium
-flatpak install flathub com.github.jeromerobert.pdfarranger org.gnome.World.PikaBackup com.discordapp.Discord org.signal.Signal md.obsidian.Obsidian
-# BETTER FONT RENDERING
-sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
-sudo ln -s /usr/share/fontconfig/conf.avail/10-hinting-slight.conf /etc/fonts/conf.d/
-sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
-sudo ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+sudo apt install gnome-tweaks ulauncher transmission zathura zathura-pdf-poppler calibre mpv chromium syncthing fonts-firacode

@@ -23,4 +23,4 @@ fish:
 	ln -sf $(DOTFILE_PATH)/config.fish $(HOME)/.config/fish/config.fish
 
 
-all: git zathura p10k alacritty helix zellij fish
+all: git zathura alacritty helix zellij fish
