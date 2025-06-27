@@ -5,12 +5,6 @@ $(HOME)/.%: %
 	ln -sf $(DOTFILE_PATH)/$^ $@
 
 git: $(HOME)/.gitconfig
-alacritty:
-	mkdir -p $(HOME)/.config/alacritty
-	ln -sf $(DOTFILE_PATH)/alacritty.toml $(HOME)/.config/alacritty/alacritty.toml
-zathura:
-	mkdir -p $(HOME)/.config/zathura
-	ln -sf $(DOTFILE_PATH)/zathurarc $(HOME)/.config/zathura/zathurarc
 helix:
 	mkdir -p $(HOME)/.config/helix
 	ln -sf $(DOTFILE_PATH)/helix.toml $(HOME)/.config/helix/config.toml
@@ -21,6 +15,9 @@ zellij:
 fish:
 	mkdir -p $(HOME)/.config/fish
 	ln -sf $(DOTFILE_PATH)/config.fish $(HOME)/.config/fish/config.fish
+ghostty:
+	mkdir -p $(HOME)/.config/ghostty
+	ln -sf $(DOTFILE_PATH)/ghostty.conf $(HOME)/.config/ghostty/config
 
 
-all: git zathura alacritty helix zellij fish
+all: git helix zellij ghostty fish
